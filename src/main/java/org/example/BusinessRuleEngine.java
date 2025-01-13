@@ -4,10 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BusinessRuleEngine {
-    List<Action> actions;
+    private List<Action> actions;
+    private Facts facts;
 
-    public BusinessRuleEngine() {
+    public BusinessRuleEngine(final Facts facts) {
         actions = new ArrayList<>();
+        this.facts = facts;
     }
 
     public void addAction(final Action action) {
@@ -19,8 +21,6 @@ public class BusinessRuleEngine {
     }
 
     public void run() {
-        this.actions.forEach(Action::perform);
+        this.actions.forEach(action -> action.perform(this.facts));
     }
-
-
 }

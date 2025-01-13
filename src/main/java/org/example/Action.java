@@ -2,5 +2,5 @@ package org.example;
 
 @FunctionalInterface
 public interface Action {
-    public void perform();
+    public void perform(Facts facts);
 }
