@@ -12,7 +12,7 @@ public class DefaultRule implements Rule {
     @Override
     public void perform(final Facts facts) {
         if (condition.evaluate(facts)) {
-            action.perform(facts);
+            action.execute(facts);
         }
     }
 }

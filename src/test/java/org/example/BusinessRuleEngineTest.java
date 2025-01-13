@@ -33,7 +33,7 @@ class BusinessRuleEngineTest {
         businessRuleEngine.addAction(mockAction);
         businessRuleEngine.run();
 
-        verify(mockAction).perform(facts);
+        verify(mockAction).execute(facts);
     }
 
     @Test
@@ -46,6 +46,6 @@ class BusinessRuleEngineTest {
         businessRuleEngine.addAction(mockAction);
         businessRuleEngine.run();
 
-        verify(mockAction).perform(mockFacts);
+        verify(mockAction).execute(mockFacts);
     }
 }

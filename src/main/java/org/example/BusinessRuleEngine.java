@@ -21,6 +21,6 @@ public class BusinessRuleEngine {
     }
 
     public void run() {
-        this.actions.forEach(action -> action.perform(this.facts));
+        this.actions.forEach(action -> action.execute(this.facts));
     }
 }
